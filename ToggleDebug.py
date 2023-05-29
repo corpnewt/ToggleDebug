@@ -251,7 +251,7 @@ if __name__ == '__main__':
     # Setup the cli args
     parser = argparse.ArgumentParser(prog="ToggleDebug.py", description="ToggleDebug - a py script to toggle debug settings in an OC config.plist")
     parser.add_argument("-d","--debug",help="on/off/toggle (default is toggle).  Sets AppleDebug, ApplePanic, Target, boot-args as needed.")
-    parser.add_argument("plist_path",nargs="*", help="Path to the target plist - if missing, the script will open in interatcive mode.")
+    parser.add_argument("plist_path",nargs="*", help="Path to the target plist - if missing, the script will open in interactive mode.")
     args = parser.parse_args()
 
     d = ToggleDebug()
