@@ -260,7 +260,8 @@ if __name__ == '__main__':
     if args.plist_path:
         plist_path = args.plist_path[0] # Get the first
         plist_data = d._load_plist(plist_path,cli=True)
-        if not plist_data:
+        if plist_data is None:
+            print("Could not locate or load {}".format(plist_path))
             exit(1) # Borked - bail
         d.plist_path = plist_path
         # Let's gather our info
